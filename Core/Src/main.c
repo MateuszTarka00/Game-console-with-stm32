@@ -101,7 +101,8 @@ int main(void)
   lcd_cmd(0x20);
   lcd_cmd(0x0c);
 
-  lcd_data(game_icon, sizeof(game_icon));
+  lcd_draw_bitmap(game_icon);
+  lcd_send();
   /* USER CODE END 2 */
 
   /* Infinite loop */
