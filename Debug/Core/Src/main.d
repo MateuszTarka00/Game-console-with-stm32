@@ -27,7 +27,7 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_spi_ex.h \
  ../Core/Inc/spi.h ../Core/Inc/main.h ../Core/Inc/gpio.h \
- ../Core/Inc/lcd.h
+ ../Core/Inc/lcd.h ../Core/Inc/bitmaps.h
 
 ../Core/Inc/main.h:
 
@@ -92,3 +92,5 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/gpio.h:
 
 ../Core/Inc/lcd.h:
+
+../Core/Inc/bitmaps.h:
