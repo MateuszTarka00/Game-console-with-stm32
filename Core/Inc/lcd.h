@@ -21,6 +21,8 @@
 #ifndef INC_LCD_H_
 #define INC_LCD_H_
 
+enum color{white, black};
+
 void lcd_reset();
 void lcd_cmd(uint8_t cmd);
 void lcd_send(void);
