@@ -26,7 +26,7 @@
 /* USER CODE BEGIN Includes */
 #include "stm32f3xx_hal.h"
 #include "lcd.h"
-#include "bitmaps.h"
+#include "main_menu.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -94,17 +94,10 @@ int main(void)
   HAL_GPIO_WritePin(RESET_GPIO_Port, RESET_Pin, GPIO_PIN_SET);
 
   lcd_reset();
+  lcd_setup();
+  menu_screen();
 
-  lcd_cmd(0x21);
-  lcd_cmd(0x14);
-  lcd_cmd(0x80 | 0x1f); //Ustawienie kontrastu
-  lcd_cmd(0x20);
-  lcd_cmd(0x0c);
-
-  lcd_draw_bitmap(game_icon);
-  lcd_send();
   /* USER CODE END 2 */
-
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)

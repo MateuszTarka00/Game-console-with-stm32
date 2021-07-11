@@ -41,7 +41,7 @@ void lcd_setup(void)
 
 	lcd_cmd(PCD8544_FUNCTION_SET | 1);
 	lcd_cmd(PCD8544_H_BIAS | 4);
-	lcd_cmd(PCD8544_H_VOP | 0x2f);
+	lcd_cmd(PCD8544_H_VOP | 0x1f);
 	lcd_cmd(PCD8544_FUNCTION_SET);
 	lcd_cmd(PCD8544_DISP_NORMAL);
 }
@@ -56,7 +56,7 @@ void lcd_draw_bitmap(const uint8_t* data)
 	memcpy(lcd_buffer, data, LCD_BUFFER_SIZE);
 }
 
-void lcd_draw_text(int row, int col, const char* text)
+void lcd_draw_text(int row, int col, const char* text, int color)
 {
 	int i;
 	uint8_t* pbuf = &lcd_buffer[row*84 + col];
@@ -66,11 +66,27 @@ void lcd_draw_text(int row, int col, const char* text)
 		int ch = *text++;
 		const uint8_t* font = &font_ASCII[ch - ' '][0];
 		for (i = 0; i < 5; i++)
-			*pbuf++ = *font++;
-
-		*pbuf++ = 0;
+		{
+			if(color == 0)
+				*pbuf++ = (*font++);
+			else
+				*pbuf++ = ~(*font++);
+		}
+		if(color == 0)
+			*pbuf++ = 0;
+		else
+			*pbuf++ = 0xff;
 	}
 
+}
+
+void lcd_paint_line(int row)
+{
+	for(int i = 0; i < 82; i++)
+	{
+		lcd_buffer[row*84 +i] = 0xff;
+
+	}
 }
 
 
