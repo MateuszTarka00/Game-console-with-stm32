@@ -44,9 +44,26 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-
+uint8_t game_choosen = 4;
 /* USER CODE BEGIN PV */
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 
+	if(GPIO_Pin == Down_Pin)
+	{
+		main_menu_down_button();
+	}
+
+	if(GPIO_Pin == Up_Pin)
+	{
+		main_menu_up_button();
+	}
+
+	if(GPIO_Pin == Right_Pin)
+	{
+		game_choosen = main_menu_right_button();
+	}
+
+}
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -95,15 +112,16 @@ int main(void)
 
   lcd_reset();
   lcd_setup();
-  menu_screen();
 
+  start_console();
   /* USER CODE END 2 */
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
-
+	  menu_screen();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
