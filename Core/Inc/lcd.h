@@ -31,5 +31,6 @@ void lcd_clear(void);
 void lcd_draw_bitmap(const uint8_t* data);
 void lcd_draw_text(int row, int col, const char* text, int color);
 void lcd_paint_line(int row);
+void paint_game(uint8_t game_map);
 
 #endif /* INC_LCD_H_ */

@@ -85,8 +85,12 @@ void lcd_paint_line(int row)
 	for(int i = 0; i < 82; i++)
 	{
 		lcd_buffer[row*84 +i] = 0xff;
-
 	}
+}
+
+void paint_game(uint8_t game_map)
+{
+
 }
 
 

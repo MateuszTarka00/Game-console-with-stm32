@@ -121,7 +121,9 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  menu_screen();
+	  switch(game_choosen)
+			case 4: menu_screen(); break;
+		//	case 0:
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
