@@ -8,6 +8,7 @@
 #ifndef INC_SNAKE_GAME_H_
 #define INC_SNAKE_GAME_H_
 
+void paint_snake();
 void snake();
 
 #endif /* INC_SNAKE_GAME_H_ */

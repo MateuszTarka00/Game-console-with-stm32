@@ -368,16 +368,21 @@ Discarded input sections
  .text          0x0000000000000000        0x0 Core/Src/snake_game.o
  .data          0x0000000000000000        0x0 Core/Src/snake_game.o
  .bss           0x0000000000000000        0x0 Core/Src/snake_game.o
- .data.game_map
-                0x0000000000000000       0xfc Core/Src/snake_game.o
+ .bss.buffer    0x0000000000000000      0x1f8 Core/Src/snake_game.o
  .data.snake_length
                 0x0000000000000000        0x1 Core/Src/snake_game.o
+ .bss.snake_positions
+                0x0000000000000000      0x1f8 Core/Src/snake_game.o
+ .bss.food_position
+                0x0000000000000000        0x2 Core/Src/snake_game.o
+ .text.paint_snake
+                0x0000000000000000       0x54 Core/Src/snake_game.o
  .text.snake    0x0000000000000000        0xe Core/Src/snake_game.o
- .debug_info    0x0000000000000000      0x1cf Core/Src/snake_game.o
- .debug_abbrev  0x0000000000000000       0xc7 Core/Src/snake_game.o
+ .debug_info    0x0000000000000000      0x267 Core/Src/snake_game.o
+ .debug_abbrev  0x0000000000000000      0x10b Core/Src/snake_game.o
  .debug_aranges
-                0x0000000000000000       0x20 Core/Src/snake_game.o
- .debug_ranges  0x0000000000000000       0x10 Core/Src/snake_game.o
+                0x0000000000000000       0x28 Core/Src/snake_game.o
+ .debug_ranges  0x0000000000000000       0x18 Core/Src/snake_game.o
  .debug_macro   0x0000000000000000      0x1c6 Core/Src/snake_game.o
  .debug_macro   0x0000000000000000      0xaa8 Core/Src/snake_game.o
  .debug_macro   0x0000000000000000      0x151 Core/Src/snake_game.o
@@ -417,10 +422,10 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x2fe Core/Src/snake_game.o
  .debug_macro   0x0000000000000000      0x1f7 Core/Src/snake_game.o
  .debug_macro   0x0000000000000000       0x40 Core/Src/snake_game.o
- .debug_line    0x0000000000000000      0x6b1 Core/Src/snake_game.o
- .debug_str     0x0000000000000000    0x94399 Core/Src/snake_game.o
+ .debug_line    0x0000000000000000      0x6e9 Core/Src/snake_game.o
+ .debug_str     0x0000000000000000    0x943c8 Core/Src/snake_game.o
  .comment       0x0000000000000000       0x54 Core/Src/snake_game.o
- .debug_frame   0x0000000000000000       0x30 Core/Src/snake_game.o
+ .debug_frame   0x0000000000000000       0x58 Core/Src/snake_game.o
  .ARM.attributes
                 0x0000000000000000       0x34 Core/Src/snake_game.o
  .group         0x0000000000000000        0xc Core/Src/spi.o

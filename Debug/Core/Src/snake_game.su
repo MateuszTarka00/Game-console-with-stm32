@@ -1,1 +1,2 @@
-snake_game.c:27:6:snake	4	static
+snake_game.c:17:6:paint_snake	16	static
+snake_game.c:29:6:snake	4	static
